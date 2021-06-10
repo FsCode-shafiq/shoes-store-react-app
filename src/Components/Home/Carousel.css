@@ -1,0 +1,19 @@
+
+.caption{
+    box-shadow: 2px 2px 5px gray;
+    background-color: #8E59CE;
+    margin-left: 650px;
+    margin-bottom: 200px;
+    animation: box-Anim 1s;
+}
+@keyframes box-Anim {
+    0%   {margin-bottom: -145px;}
+    100% {margin-bottom: 200px;}
+  }
+.name{
+    color: white;
+}
+.title{
+    color: white;
+}
+/* -145 */
