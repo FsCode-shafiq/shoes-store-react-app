@@ -7,12 +7,13 @@ const CarouselsComp = () => {
 
   console.log("Carsouel data", CarouselData);
   return (
-    <Carousel className="carsel">
+    <Carousel >
       {CarouselData.map((ele, ind) => {
         if (ind <= 10) {
           return (
-            <Carousel.Item style={{ height: "600px" }}>
+            <Carousel.Item key={ind} style={{ height: "600px" }}>
               <img
+              
                 className="d-block w-50"
                 src={ele.media.imageUrl}
                 alt={ele.brand}

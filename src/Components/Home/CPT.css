@@ -1,0 +1,4 @@
+.cardd:hover{
+    border: 1px solid purple;
+    box-shadow: 4px 4px 10px #8E59CE;
+}
