@@ -11,7 +11,7 @@ const CarouselsComp = () => {
       {CarouselData.map((ele, ind) => {
         if (ind <= 10) {
           return (
-            <Carousel.Item key={ind} style={{ height: "600px" }}>
+            <Carousel.Item  key={ind} style={{ height: "600px" }}>
               <img
               
                 className="d-block w-50"

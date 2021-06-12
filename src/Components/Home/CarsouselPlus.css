@@ -1,0 +1,16 @@
+.carPlus{
+    
+    height: 790px;
+}
+.carPlus-img{
+   
+    width: 808px;
+    overflow: visible;
+    height: 790px;
+}
+.carPlus-caption{
+    color: white;
+    margin-bottom: 50px;
+    background: linear-gradient(to top, #0099ff 0%, #9966ff 100%); ;
+    
+}
