@@ -1,16 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
-import Paper from "@material-ui/core/Paper";
 import Grow from "@material-ui/core/Grow";
 import Grid from "@material-ui/core/Grid";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import React from "react";
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Typography from "@material-ui/core/Typography";
 import { useContext } from "react";
 import shoeData from "../contextApi";
 import "./DropDown.css";
@@ -18,7 +16,6 @@ import "./DropDown.css";
 const useStyles2 = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-
   },
   paper: {
     padding: theme.spacing(2),
@@ -29,7 +26,7 @@ const useStyles2 = makeStyles((theme) => ({
 
 const DropDown = () => {
   const GridData = useContext(shoeData);
-  
+
   const [checked, setChecked] = React.useState(false);
 
   const handleChange = () => {
@@ -37,7 +34,7 @@ const DropDown = () => {
   };
   const useStyles1 = makeStyles((theme) => ({
     root: {
-      height: checked?180:0,
+      height: checked ? 180 : 0,
     },
     container: {
       display: "flex",
@@ -60,7 +57,7 @@ const DropDown = () => {
       maxWidth: 345,
     },
     media: {
-      height: checked?140:0,
+      height: checked ? 140 : 0,
     },
   });
   const classes3 = useStyles3();
@@ -68,89 +65,80 @@ const DropDown = () => {
   const classes1 = useStyles1();
   return (
     <div className={classes1.root}>
-    <FormControlLabel className='head'
-      control={<Button variant="contained" color="primary" size='large' checked={checked} onClick={handleChange}>Click to see New Arrivals!</Button>}
+      <FormControlLabel
+        className="head"
+        control={
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            checked={checked}
+            onClick={handleChange}
+          >
+            Click to see New Arrivals!
+          </Button>
+        }
+      />
+      <div className={classes1.container}>
+        <div className={classes2.root}>
+          <Grid container spacing={3}>
+            <Grid item xs={2}>
+              <Grow in={checked}>
+                <Card className={classes3.root}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes3.media}
+                      image={GridData[21].media.thumbUrl}
+                      title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h6" component="h2">
+                        {GridData[21].brand}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grow>
+            </Grid>
 
-    />
-    <div className={classes1.container}>
-    <div className={classes2.root}>
-      <Grid container spacing={3}>
-      <Grid item xs={2} >
-      <Grow in={checked}><Card className={classes3.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes3.media}
-          image={GridData[21].media.thumbUrl}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="h2">
-            {GridData[21].brand}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-        {/* <Paper elevation={4} className={classes1.paper}>
-          <svg className={classes1.svg}>
-            <polygon points="0,100 50,00, 100,100" className={classes1.polygon} />
-          </svg>
-        </Paper> */}
-
-      </Grow>
-              </Grid>
-      
-        {GridData.map((ele, ind) => {
-          if (ind > 21 && ind <= 26) {
-              var time = 0;
-              time +=1000; 
-            return (
-              <Grid item xs={2}>
-                <Grow in={checked}><Card className={classes3.root} style={{ transformOrigin: '0 0 0' }}
-        {...(checked ? { timeout: 1000 } : {})}>
-      <CardActionArea>
-        <CardMedia
-          className={classes3.media}
-          image={ele.media.thumbUrl}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {ele.brand}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-        {/* <Paper elevation={4} className={classes1.paper}>
-          <svg className={classes1.svg}>
-            <polygon points="0,100 50,00, 100,100" className={classes1.polygon} />
-          </svg>
-        </Paper> */}
-
-      </Grow>
-              </Grid>
-            );
-          }
-        })}
-      </Grid>
+            {GridData.map((ele, ind) => {
+              if (ind > 21 && ind <= 26) {
+                var time = 0;
+                time += 1000;
+                return (
+                  <Grid item xs={2}>
+                    <Grow in={checked}>
+                      <Card
+                        className={classes3.root}
+                        style={{ transformOrigin: "0 0 0" }}
+                        {...(checked ? { timeout: 1000 } : {})}
+                      >
+                        <CardActionArea>
+                          <CardMedia
+                            className={classes3.media}
+                            image={ele.media.thumbUrl}
+                            title="Contemplative Reptile"
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="h2"
+                            >
+                              {ele.brand}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                      </Card>
+                    </Grow>
+                  </Grid>
+                );
+              }
+            })}
+          </Grid>
+        </div>
+      </div>
     </div>
-
-      
-      {/* Conditionally applies the timeout prop to change the entry speed. */}
-      {/* <Grow
-        in={checked}
-        style={{ transformOrigin: '0 0 0' }}
-        {...(checked ? { timeout: 1000 } : {})}
-      >
-        <Paper elevation={4} className={classes.paper}>
-          <svg className={classes.svg}>
-            <polygon points="0,100 50,00, 100,100" className={classes.polygon} />
-          </svg>
-        </Paper>
-      </Grow> */}
-    </div>
-  </div>
-    
   );
- 
 };
 export default DropDown;

@@ -1,0 +1,23 @@
+.Footer-main{
+    margin-top: 150px;
+    
+}
+.Footer-div{
+    background-color: #404040;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.terms{
+    display: flex;
+    width: 850px;
+    justify-content: center;
+    color: white;
+    padding-top: 20px;
+    background-color: #838383;
+}
+.item1{
+    
+    border-right: 3px solid purple;
+    margin-right: 20px;
+    padding-right: 3px;
+}

@@ -59,6 +59,7 @@ const MainComponent = () => {
           
         </shoeData.Provider>
       </Router>
+      
     </div>
   );
 };
