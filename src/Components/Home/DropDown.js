@@ -12,7 +12,11 @@ import Typography from "@material-ui/core/Typography";
 import { useContext } from "react";
 import shoeData from "../contextApi";
 import "./DropDown.css";
-
+import { NavLink } from "react-router-dom";
+const linkStyle = {
+  textDecoration: "none",
+  color: 'black'
+};
 const useStyles2 = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -82,6 +86,7 @@ const DropDown = () => {
       <div className={classes1.container}>
         <div className={classes2.root}>
           <Grid container spacing={3}>
+            
             <Grid item xs={2}>
               <Grow in={checked}>
                 <Card className={classes3.root}>
@@ -93,7 +98,13 @@ const DropDown = () => {
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h6" component="h2">
-                        {GridData[21].brand}
+                      <NavLink
+                      style={linkStyle}
+                      to={`/product/${21}`}
+                    >
+                      {GridData[21].brand}
+                    </NavLink>
+                        
                       </Typography>
                     </CardContent>
                   </CardActionArea>
@@ -125,7 +136,13 @@ const DropDown = () => {
                               variant="h5"
                               component="h2"
                             >
-                              {ele.brand}
+                              <NavLink
+                      style={linkStyle}
+                      to={`/product/${ind}`}
+                    >
+                       {ele.brand}
+                    </NavLink>
+                             
                             </Typography>
                           </CardContent>
                         </CardActionArea>

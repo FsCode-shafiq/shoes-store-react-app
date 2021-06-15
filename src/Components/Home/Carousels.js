@@ -2,6 +2,10 @@ import { useContext } from "react";
 import { Carousel } from "react-bootstrap";
 import shoeData from "../contextApi";
 import "./Carousel.css";
+import { NavLink } from "react-router-dom";
+const linkStyle = {
+    textDecoration: "none",
+  };
 const CarouselsComp = () => {
   const CarouselData = useContext(shoeData);
 
@@ -20,8 +24,17 @@ const CarouselsComp = () => {
               />
               <Carousel.Caption className='caption'>
                 <div>
-              <h3 className="name" >{ele.name}</h3>
+                <NavLink
+          style={linkStyle}
+          to={`/product/${ind}`}
+          activeStyle={{
+            color: "#5D15B4",
+          }}
+        >
+         <h3 className="name" >{ele.name}</h3>
                 <p className="title" >{ele.title}</p>
+        </NavLink>
+              
               </div>
                 
               </Carousel.Caption>

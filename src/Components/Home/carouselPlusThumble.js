@@ -3,18 +3,17 @@ import shoeData from "../contextApi";
 import "./CPT.css";
 import { Card } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import CarsouselPlus from "./CarouselPlus";
+import { NavLink } from "react-router-dom";
+const linkStyle = {
+  textDecoration: "none",
+};
 const CPT = () => {
   const thumbleAndCarourl = useContext(shoeData);
   const useStyles = makeStyles((theme) => ({
     root: {},
-    paper: {
-      padding: theme.spacing(0),
-      textAlign: "center",
-      color: theme.palette.text.secondary,
-    },
+    
   }));
   const classes = useStyles();
   return (
@@ -37,17 +36,26 @@ const CPT = () => {
           {thumbleAndCarourl.map((ele, ind) => {
             if (ind > 10 && ind <= 14) {
               return (
-                <Card
+                <NavLink
+                      style={linkStyle}
+                      to={`/product/${ind}`}
+                      activeStyle={{
+                        
+                      }}
+                    >
+                      <Card
                   className="cardd"
                   key={ind}
                   style={{ width: "300px", height: "350px", marginTop: "15px" }}
                 >
                   <Card.Img variant="top" src={ele.media.thumbUrl} />
                   <Card.Body>
-                    <Card.Title>{ele.name}</Card.Title>
-                    <Card.Text>{ele.title}</Card.Text>
+                    <Card.Title style={{color: 'black'}}>{ele.name}</Card.Title>
+                    <Card.Text style={{color: 'black'}}>{ele.title}</Card.Text>
                   </Card.Body>
                 </Card>
+                    </NavLink>
+                
               );
             }
           })}

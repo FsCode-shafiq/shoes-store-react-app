@@ -1,0 +1,28 @@
+.product-button{
+    color: purple;
+    font-size: 17px;
+}
+.detail-div{
+    text-align: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.heading8{
+    font-size: 25px;
+    font-weight: bold;
+}
+.span-heading{
+    font-weight: bold;
+    color: purple;
+}
+.para4{
+    color: gray;
+}
+.purchase{
+    color: white;
+    background-color: #570378;
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 7px;
+}
