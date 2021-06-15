@@ -1,8 +1,19 @@
+import './Aboutus.css';
+import CreatShoe from './GridCreateShoe';
+import AboutInfo from './GridAboutInfo';
 const About = ()=>{
+    
     return(
         <div>
-            <h1>This is About page</h1>
+            <div className='div-one'><h3>About Us</h3></div>
+            <div className='div-two'>
+                <AboutInfo></AboutInfo>
+            </div>
+            <div className='div-three'>
+                <CreatShoe/>
+            </div>
         </div>
+        
     );
 }
 

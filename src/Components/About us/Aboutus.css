@@ -1,0 +1,115 @@
+.div-one{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4E4E4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-grow: 1;
+}
+.div-two{
+    margin-top: 20px;
+    height: 500px;
+    padding-top: 50px;
+}
+.grid-div-one{
+    height: 435px;
+    background: linear-gradient(to bottom, #ffffff 0%, #9999ff 100%);
+}
+.image{
+    width: 400px;
+    transform: rotate(90deg);
+    margin: 0;
+    margin-top: 60px;
+
+}
+
+.info-main{
+    
+    text-align: left;
+    margin-left: -5px;
+    height: 435px;
+    width: 900px;
+    
+}
+.heading1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+.para1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    text-align: justify;
+    font-size: 15px;
+    
+}
+.para2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    text-align: justify;
+    font-size: 15px;
+    border-right: 5px solid purple;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.para3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+    text-align: justify;
+    font-size: 15px;
+    border-left: 3px solid purple;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: -20px;
+}
+.div-three{
+    height: 850px;
+}
+.heading3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+.heading4{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.heading5{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+.heading6{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+.para5{
+    text-align: center;
+    color: gray;
+}
+.icons{
+    width: 50px;
+    height: 50px;
+    
+}
+.heading7{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    
+    width: 500px;
+    text-align: left;
+    padding-left: 5px;
+    color: black;
+}
+.icon-para{
+    
+    width: 600px;
+    text-align: justify;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 15px;
+}

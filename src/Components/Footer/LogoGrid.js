@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import logo1 from "./logo1.png";
 import logo2 from './logo2.png';
@@ -9,11 +8,6 @@ import logo4 from './logo4.png';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
   },
 }));
 
